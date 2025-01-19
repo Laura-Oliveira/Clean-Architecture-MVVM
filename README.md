@@ -1,6 +1,6 @@
 # Ecommerce App
 
-Ecommerce App is an **Android App** that focus in creatina an ecommerce app to practice the implementation of Clean Architecture + MVVM + Data Binding + Live Data.
+Ecommerce App is an **Android App** that focus in creating an ecommerce app to practice the implementation of Clean Architecture + MVVM + Data Binding + Live Data.
 
 ### 💻Technology:
 * Android;
