@@ -3,6 +3,7 @@
 Ecommerce App is an **Android App** that focus in creating an ecommerce app to **practice the implementation of Clean Architecture + MVVM + Data Binding + Live Data**.
 
 ### 💻Technology:
+
 * Android;
 * Kotlin;
 * Clean Architecture;
