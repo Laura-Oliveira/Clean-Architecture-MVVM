@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".product.ui.ProductsView">
+    tools:context=".view.ProductsView">
 
     <data>
         <variable
             name="listItem"
-            type="com.clean.arch.product.domain.ProductGridViewModel" />
+            type="com.ecommerce.viewModel.ProductsViewModel" />
     </data>
 
     <!-- BoxGlobal -->
@@ -17,30 +18,50 @@
 
         <!-- AppBar -->
         <com.google.android.material.appbar.AppBarLayout
-            android:id="@+id/appBar"
+            android:id="@+id/app_bar_layout"
             style="@style/AppBar"
+            app:logo="@drawable/branded_menu"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/app_bar"
-                style="@style/Widget.Shrine.Toolbar"
-                 />
+                app:contentInsetStart="0dp"
+                style="@style/Widget.Toolbar"/>
         </com.google.android.material.appbar.AppBarLayout>
 
-        <androidx.core.widget.NestedScrollView
-            style="@style/ScrollViewProducts"
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:visibility="gone"
+            android:id="@+id/app_bar_expanded"
+            style="@style/Widget.Backdrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:elevation="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/appBar">
+            app:layout_constraintTop_toTopOf="parent">
+
+            <include layout="@layout/menu_backdrop" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!-- ScrollView List Products -->
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll_view_products"
+            style="@style/ScrollViewProducts"
+            android:elevation="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/app_bar_layout">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_view"
-                style="@style/CardView.Dark"
+                style="@style/Widget.CarUi.CarUiRecyclerView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="wrap_content" />
         </androidx.core.widget.NestedScrollView>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
