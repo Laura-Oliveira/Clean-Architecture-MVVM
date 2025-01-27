@@ -12,7 +12,7 @@ android {
 
     defaultConfig {
         applicationId = "com.clean.arch"
-        minSdk = 26
+        minSdk = 28
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -45,7 +45,6 @@ dependencies {
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
-  //  implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     testImplementation(libs.junit)
@@ -54,6 +53,7 @@ dependencies {
 
     //Material Design
     api (libs.material.v110alpha06)
+    implementation(libs.car.ui.lib)
 
     //View Model & Data Binding
     implementation(libs.androidx.lifecycle.viewmodel.ktx)

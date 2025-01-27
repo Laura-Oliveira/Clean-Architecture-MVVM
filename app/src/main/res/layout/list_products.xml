@@ -8,7 +8,7 @@
     <data>
         <variable
             name="listItem"
-            type="com.ecommerce.viewModel.ProductsViewModel" />
+            type="com.clean.arch.product.domain.ProductsViewModel" />
     </data>
 
     <!-- BoxGlobal -->
